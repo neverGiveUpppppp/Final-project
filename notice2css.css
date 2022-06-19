@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "reset.css";    
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
 
 
@@ -136,27 +136,44 @@ html, body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
-.main {
+.main{
     width: 100%;
     display: flex;
     justify-content: center;
     font-family:'Noto Sans KR', sans-serif;
+    
 }
 
 .main .infoContainer {
     flex-basis: 80%;
     height: 800px;
     background-color: white;
+    
 }
+.infoContainer  table{
+    margin: 0 auto;
+} 
 
-.titleArea {
+.titleArea{
     display: flex;
     /* justify-content: center; */
     gap: 3%; 
     align-items: center;
-    padding: 2% 4%;
+    padding: 2% 11%;
+    width:820px;
+    margin: 0 auto;
+}
+.titleArea > div{
+    margin: 0 auto;
+}
+.titleArea > h3{
+    font-size: 22px; font-weight: 500;
+}
+.titleArea > span{
+    font-size: 13px; color:rgb(135, 133, 133);
 }
 
 .boardSearchBox {
@@ -165,9 +182,11 @@ html, body {
     display: flex;
     justify-content: space-between; /* space-between의 디폴트 범위지정값은 나머지 텍스트나 범위를 제외한 전부를 먼저 준다 */
     align-items: center;
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-top: 30px;
+    padding-top: 20px;
     border-top: 1px solid #FCD2D1;
+    width:770px;
+    margin: 0 auto;
 }
 
 .boardSearchBox > div {
@@ -176,18 +195,33 @@ html, body {
 }
 .boardSearchBox span {
     font-size: x-small;
+    padding-top: 5px;
+    align-content: center;
+    vertical-align: middle;
 }
 
 .boardSearchBox > div > ul {
     display: flex;
     /* justify-content: space-between;  */
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 10px;
     font-size: smaller;
 }
+.boardSearchBox > div.searchBar{
+    /* boardSearchBox 아래있는 div태그 중에 이름이 searchBar인 태그에만 적용 */
+    display: flex;
+    gap : 0px;
 
+    
+}
+/* 
+.boardSearchBox > div .searchBar
+boardSearchBox 아래있는 div태그 자식 요소 중에 seachBar태그에만 적용  */
+
+.searchBar > input{
+    display: flex;
+    border: 1px solid lightgray;
+}
 
 thead tr{
     width: 100%;
@@ -227,11 +261,12 @@ tbody td:nth-last-child(2){
 } 
 /* 뒤에서부터 4번째가 tr태그면 적용  // 태그 우선 */
 
-.searchBar{
-    display: flex;
-    gap : 0px;
-    
-}
+
+
+
+
+
+/* 상속 선택자로 위에서 처리한 코드 */
 /* 
 .noticeTop{
     width: 100%;
@@ -247,13 +282,13 @@ tbody td:nth-last-child(2){
     text-align: center;
 } */
 
-
+/* 
 .noticeBottom{
     width: 100%;
     border-top: 2px solid #FE8F8F  ;
     border-bottom: 2px solid #FE8F8F  ;
 }
-
+ */
 
 
 
