@@ -9,17 +9,7 @@ th{
     line-height: 200%;
 }
 
-.content2{
-    width:1000px;
-    margin: 0 auto;
-    word-break: break-all;
-}
 
-.content > p{
-    min-height: 300px;
-    width:1000px;
-    display: inline-block;
-}
 
 
 .title{
@@ -51,7 +41,13 @@ thead > tr{
     width:450px;
 }
 
-.content2 > p{
+
+.content{
+    width:1000px;
+    margin: 0 auto;
+    word-break: break-all;
+}
+.content > p{
     padding: 2%;
     padding-bottom: 5%;
     border-bottom: 1px solid  lightgray;
