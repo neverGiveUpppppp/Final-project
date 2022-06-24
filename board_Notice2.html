@@ -52,20 +52,15 @@
                         <tbody>
                             <c:forEach var="b" items="${ list }">
                                 <tr>
-                                    <td class="tbodyTd1">${ b.boardId } </td>        
-                                    <td class="tbodyTd2">${ b.boardTitle }</td>
-                                        <!-- <a href=""><b></b></a><b></b></td> -->
-                                    <td class="tbodyTd3"> ${ b.nickName } </td>
-                                    <td class="tbodyTd4">${ b.boardCreateDate }</td>
-                                    <td class="tbodyTd5">${ b.boardCount }</td>
+                                    <td class="tbodyTd1" width="60">${ b.boardId } </td>        
+                                    <td class="tbodyTd2" style="text-align:left">${ b.boardTitle }</td>
+                                    <td class="tbodyTd3" width="100"> ${ b.adminId } </td>
+                                    <td class="tbodyTd4" width="100">${ b.boardCreateDate }</td>
+                                    <td class="tbodyTd5" width="45">${ b.boardCount }</td>
                                 </tr>
                             </c:forEach>
-                                                
-
                         </tbody>
                             
-
-
                     </table>
                 </div>
 
