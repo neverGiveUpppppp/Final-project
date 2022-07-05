@@ -5,18 +5,27 @@
 html, body {
     box-sizing: border-box;
 }
+summary{
+    outline: none;
+    cursor : pointer;
+    display: -webkit-box;
+    /* display: none;  */
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    
 }
+
 .main{
     width: 100%;
     display: flex;
     justify-content: center;
     font-family:'Noto Sans KR', sans-serif;
+    
 }
+
 .main .infoContainer {
     flex-basis: 80%;
     height: 800px;
@@ -25,7 +34,10 @@ html, body {
 }
 .infoContainer  table{
     margin: 0 auto;
+    width: 800px;
+    text-align: center;
 } 
+
 .titleArea{
     display: flex;
     /* justify-content: center; */
@@ -35,6 +47,7 @@ html, body {
     width:820px;
     margin: 0 auto;
 }
+
 .titleArea > h3{
     font-size: 22px; font-weight: 500;
 }
@@ -42,39 +55,28 @@ html, body {
     font-size: 13px; color:rgb(135, 133, 133);
 }
 
-.titleArea+div>table{
-    width: 700px;
-    text-align: center;
-    border-collapse: collapse
-}
 
-.titleArea+div>table>thead>tr{
-    border-top: 2px solid rgb(254, 143, 143);
-    border-bottom: 2px solid #FE8F8F; 
-}
-.titleArea+div>table>thead>tr>td{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 12pt;
-}
-/* thead{
+/*********************************************/
+
+
+thead tr{
     width: 100%;
     height: 2rem;
-    min-height: 20px;
-    max-height: 50px;
-    color: 1px solid blue;
+        min-height: 20px;
+        max-height: 50px;
     border-top: 2px solid rgb(254, 143, 143)  ;
-    border-bottom: 2px solid #FE8F8F  ; 
-} */
-/* thead th{
+    border-bottom: 2px solid #FE8F8F;
+}
+thead th{
     padding: 2% 1%;
     vertical-align: middle;
     text-align: center;
     font-size: small;
     font-weight: none;
-} */
+}
 tbody > tr{
     height: 2rem;
+    /* border-top: 1px solid lightgray; */
     border-bottom: 1px solid lightgray;
     align-content: center;
     vertical-align: middle;
@@ -93,11 +95,73 @@ tbody td:nth-last-child(1){
 tbody td:nth-last-child(2){
     color: gray;
 } 
-.tbodyTd2{
-    padding-left: 20px;
-    text-align: left;
+
+/*********************************************/
+
+.QnaToggle{
+    text-align: center;
+    margin: 0 auto;
+    border : none;
 }
-/* 뒤에서부터 4번째가 tr태그면 적용  // 태그 우선 */
+/* .QnaToggleOpen > p{
+    background-color: lightgray;
+    text-align: center;
+    margin: 0 auto;
+} */
+.QnaToggleOpen li{
+    background-color: rgb(245, 245, 245);
+    width:800px;
+    min-height: 80px;
+    margin: 0 auto;
+}
+/* 아래꺼 필요없는 듯? */
+/* .QnaToggleOpen > ul > li > button{
+    color:#FE8F8F;
+    border : 0px;
+    background-color: #fff;
+    font-weight: 500;
+    float: right;
+} */
+.QnaToggleOpen_Button{
+    float: right;
+    margin: 2% 2%;
+    margin-right: 100px;
+}
+.QnaToggleOpen_Button > button{
+    color:#FE8F8F;
+    border : 0px;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.QnaToggleContent{
+    margin: 0 auto;
+}
+.QnaToggleContent > li{
+    width:740px;
+    padding:3%;
+}    
+
+/*********************************************/
+
+.submitButton{
+    width:1000px;
+    text-align: center;
+    margin:2% auto;
+    
+}
+.submitButton > button{
+    width:150px;
+    height:35px;
+    background-color: #FE8F8F;
+    border: 1px solid #FF5C58;
+    color:#fff;
+}
+
+
+
+/*********************************************/
+
 
 .boardSearchBox {
     /* justify-content의 letf,right,center 위치 외에 세부조정하고 싶으면,
@@ -108,12 +172,14 @@ tbody td:nth-last-child(2){
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #FCD2D1;
-    width:770px;
+    width:800px;
     margin: 0 auto;
 }
+
 .boardSearchBox > div {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    padding: 0 2%;
 }
 .boardSearchBox span {
     font-size: x-small;
@@ -121,17 +187,20 @@ tbody td:nth-last-child(2){
     align-content: center;
     vertical-align: middle;
 }
+
 .boardSearchBox > div > ul {
     display: flex;
     /* justify-content: space-between;  */
     list-style: none;
     gap: 10px;
     font-size: smaller;
+    margin-right: 350px;
 }
 .boardSearchBox > div.searchBar{
     /* boardSearchBox 아래있는 div태그 중에 이름이 searchBar인 태그에만 적용 */
     display: flex;
-    gap : 0px;  
+    gap : 0px;
+    
 }
 /* 
 .boardSearchBox > div .searchBar
@@ -143,35 +212,10 @@ boardSearchBox 아래있는 div태그 자식 요소 중에 seachBar태그에만 
 }
 
 
+/*********************************************/
 
 
 
-
-
-
-/* 상속 선택자로 위에서 처리한 코드 */
-/* 
-.noticeTop{
-    width: 100%;
-    height: 2rem;
-        min-height: 25px;
-        max-height: 50px;
-    border-top: 2px solid #FE8F8F  ;
-    border-bottom: 2px solid #FE8F8F  ;
-}
-.noticeTop > th{
-    padding: 2% 1%;
-    vertical-align: middle;
-    text-align: center;
-} */
-
-/* 
-.noticeBottom{
-    width: 100%;
-    border-top: 2px solid #FE8F8F  ;
-    border-bottom: 2px solid #FE8F8F  ;
-}
- */
 
 
 

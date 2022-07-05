@@ -244,6 +244,7 @@ tbody > tr{
     border-bottom: 1px solid lightgray;
     align-content: center;
     vertical-align: middle;
+    text-align: center;
 }
 tbody > tr > td{
     height: 2rem;
